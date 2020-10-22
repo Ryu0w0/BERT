@@ -17,10 +17,11 @@ A PyTorch implementation of BERT
 
 ## Network structure
 
-The figure below shows the structure of BERT constructed in this repository for the binary sentiment analysis on Yelp dataset. BERT consists of 3 modules which were BERT Embeddings, BERT encoder and BERT Pooler. A classifier followed these structures. 
-<img src="https://github.com/Ryu0w0/meta_repository/blob/master/BERT/images/structure.PNG"　width="50%" height="50%">
+The figure below shows the structure of BERT constructed in this repository for the binary sentiment analysis on Yelp dataset. BERT consists of 3 modules which are BERT Embeddings, BERT encoder and BERT Pooler. A classifier followed these structures. 
+
+<img src="https://github.com/Ryu0w0/meta_repository/blob/master/BERT/images/structure.PNG" width=60%>
 
 In a classifier module, an additional fully-connected layer is added (Figure 3). This approach was led by the following data exploration. Firstly, the number of tokens per review was calculated and plotted as histograms shown in Figure 2. The frequency is approximately 24000 around 50 tokens of reviews in the histogram over positive reviews in (a), whereas it is around 16000 for negative reviews in (b). It indicates that shorter reviews are more likely to be positive reviews and vice versa. Although BERT considers the meaning of words and position of words, it does not include the information of the length of sequences. This approach slightly improved the validation accuracy from 0.9491 to 0.9509.
 
-<img src="https://github.com/Ryu0w0/meta_repository/blob/master/BERT/images/histogram.PNG"　width="50%" height="50%">
+<img src="https://github.com/Ryu0w0/meta_repository/blob/master/BERT/images/histogram.PNG" width=60%>
 
