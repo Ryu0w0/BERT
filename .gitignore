@@ -1,0 +1,15 @@
+# https://qiita.com/anqooqie/items/110957797b3d5280c44f
+*.ptn
+*.pickle
+*.tar
+*.txt
+*.jpg
+*.lnk
+*.log
+output/*
+/input
+/load/*
+.ipynb_checkpoints
+.idea
+__pycache__
+
